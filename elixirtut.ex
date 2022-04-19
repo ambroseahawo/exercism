@@ -42,7 +42,7 @@ defmodule M do
     longer_str = my_str <> " " <> "is concatenated"
     IO.puts("Longer String : #{longer_str}")
 
-    IO.puts "My ? #{String.contains?(my_str, "Sentence")}"
+    IO.puts("My ? #{String.contains?(my_str, "Sentence")}")
 
     # get character at index
     IO.puts("Char at index 2 : #{String.at(my_str, 2)}")
@@ -51,48 +51,49 @@ defmodule M do
     IO.puts("Substring : #{String.slice(my_str, 5, 8)}")
 
     # split string to array/list
-    IO.inspect String.split(longer_str, " ")
+    IO.inspect(String.split(longer_str, " "))
 
     # join array/list to string
     # IO.puts("Joined String : #{String.join(String.split(longer_str, " "), " ")}")
 
-    IO.puts String.reverse(longer_str)
-    IO.puts String.upcase(longer_str)
-    IO.puts String.downcase(longer_str)
-    IO.puts String.capitalize(longer_str)
+    IO.puts(String.reverse(longer_str))
+    IO.puts(String.upcase(longer_str))
+    IO.puts(String.downcase(longer_str))
+    IO.puts(String.capitalize(longer_str))
 
-    4 * 10 |> IO.puts
-
+    (4 * 10) |> IO.puts()
   end
 
   def do_math do
-    IO.puts "Addition: 5 + 4 = #{5+4}"
-    IO.puts "Substraction: 10 - 3 = #{10-3}"
-    IO.puts "Multiplication: 2 * 16 = #{2*16}"
-    IO.puts "Division: 16 / 2 = #{16/2}"
+    IO.puts("Addition: 5 + 4 = #{5 + 4}")
+    IO.puts("Substraction: 10 - 3 = #{10 - 3}")
+    IO.puts("Multiplication: 2 * 16 = #{2 * 16}")
+    IO.puts("Division: 16 / 2 = #{16 / 2}")
 
     # integer division
-    IO.puts "Integer Division: 17 div 2 = #{div(17, 2)}"
+    IO.puts("Integer Division: 17 div 2 = #{div(17, 2)}")
     # modulus division
-    IO.puts "Modulus Divion: 19 mod 2 = #{rem(19,2)}"
+    IO.puts("Modulus Divion: 19 mod 2 = #{rem(19, 2)}")
   end
 
   def compare_values do
-    IO.puts "4 == 4.0 : #{4 == 4.0}"
-    IO.puts "4 === 4.0 : #{4 === 4.0}"
-    IO.puts "4 != 4.0 : #{4 != 4.0}"
-    IO.puts "4 !== 4.0 : #{4 !== 4.0}"
-    IO.puts ""
-    IO.puts "5 > 4 : #{5 > 4}"
-    IO.puts "5 >= 4 : #{5 >= 4}"
-    IO.puts "5 < 4 : #{5 < 4}"
-    IO.puts "5 <= 4 : #{5 <= 4}"
+    IO.puts("4 == 4.0 : #{4 == 4.0}")
+    IO.puts("4 === 4.0 : #{4 === 4.0}")
+    IO.puts("4 != 4.0 : #{4 != 4.0}")
+    IO.puts("4 !== 4.0 : #{4 !== 4.0}")
+    IO.puts("")
+    IO.puts("5 > 4 : #{5 > 4}")
+    IO.puts("5 >= 4 : #{5 >= 4}")
+    IO.puts("5 < 4 : #{5 < 4}")
+    IO.puts("5 <= 4 : #{5 <= 4}")
 
-    age = IO.gets("What is your age? ") |> String.trim
-    IO.puts "You are #{age} years old"
+    age = 16
 
-    IO.puts "Vote & Drive : #{(age >= 16) and (age >= 18)}"
-    IO.puts "Vote or Drive : #{(age >= 16) or (age >= 18)}"
+    IO.puts("Vote & Drive : #{age >= 16 and age >= 18}")
+    IO.puts("Vote or Drive : #{age >= 16 or age >= 18}")
 
+    IO.puts(not true)
   end
 end
+
+# data type conversion in elixir
