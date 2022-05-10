@@ -22,3 +22,10 @@ abstract syntax tree
 staircasing
 
 https://www.youtube.com/watch?v=pBNOavRoNL0
+
+https://github.com/StephenGrider/ElixirCode
+
+Elixir - React;- 
+1. https://medium.com/@ken11zer01/create-react-app-and-elixir-phoenix-227678660257#:~:text=Running%20elixir%20phoenix%20will%20also,right%20out%20of%20the%20box.
+
+2. https://github.com/iceniveth/phoenixcra
