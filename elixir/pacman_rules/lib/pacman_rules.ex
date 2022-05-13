@@ -13,10 +13,11 @@ defmodule PacmanRules do
 
   """
   def eat_ghost?(power_pellet_active, is_touching_ghost) do
+    # returns boolean value if Pac-Man is able to eat
     # return true only if Pac-Man has a power pellet active and is touching a ghost
     case {power_pellet_active, is_touching_ghost} do
       {:true, :true} -> "true"
-      _ -> "false"
+      _ -> false
     end
   end
 
@@ -25,7 +26,7 @@ defmodule PacmanRules do
     case {istouching_power_pellet, is_touching_dot} do
       {:true, _} -> "true"
       {_, :true} -> "true"
-      _ -> "false"
+      _ -> false
     end
   end
 
@@ -33,7 +34,7 @@ defmodule PacmanRules do
     # return true if Pac-Man is touching a ghost and does not have a power pellet active.
     case {power_pellet_active, is_touching_ghost} do
       {:false, :true} -> "true"
-      _ -> "false"
+      _ -> false
     end
   end
 
@@ -42,7 +43,7 @@ defmodule PacmanRules do
     # based on the arguments defined in Part 3.
 
     case {eaten_all_dots, power_pellet_active, is_touching_ghost} do
-      {:true, :false, :true} -> "true"
+      {:true, :false, :true} -> false
       _ -> "false"
     end
   end
