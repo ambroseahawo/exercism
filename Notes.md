@@ -1,0 +1,7 @@
+- All data types are immutable
+- Pattern Matching
+- Maps
+- Character list
+- Protocols
+- Processes and Concurrency
+- Macros
