@@ -9,7 +9,7 @@ defmodule Tutorials.Lists do
   @doc """
   Returns the sum of numbers in a list
   """
-  @spec sum(list(numbers())) :: number()
+  @spec sum(list(number())) :: number()
   def sum(nums), do: sum_tail_rec(nums)
 
   @spec sum_simple(list(number())) :: number()
@@ -20,4 +20,6 @@ defmodule Tutorials.Lists do
   def sum_tail_rec(nums,acc \\ 0)
   def sum_tail_rec([], acc), do: acc
   def sum_tail_rec([h | t], acc), do: sum_tail_rec(t, acc + h)
+
+
 end
