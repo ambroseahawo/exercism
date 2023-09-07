@@ -38,4 +38,12 @@ defmodule Tutorials.Lists do
   # when using pipe operator, the parameter is usually passed as the first parameters
   # always parentheses with pipe operator
   def map([h | t], func, acc), do: map(t, func, [func.(h) | acc])
+
+  @doc """
+    concat
+  """
+  def concat(src, dst), do: concat_func(src |> reverse(), dst)
+
+  def concat_func([], dst), do: dst
+  def concat_func([h | t], dst), do:  concat_func(t, [h | dst])
 end
