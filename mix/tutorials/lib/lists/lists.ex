@@ -32,7 +32,10 @@ defmodule Tutorials.Lists do
   @doc """
     map
   """
+  @spec map([any()], (any() -> any()), [any()]) :: [any()]
   def map(elements, func, acc \\ [])
-  def map([], _, acc), do: acc
+  def map([], _, acc), do: acc |> reverse()
+  # when using pipe operator, the parameter is usually passed as the first parameters
+  # always parentheses with pipe operator
   def map([h | t], func, acc), do: map(t, func, [func.(h) | acc])
 end
