@@ -28,4 +28,11 @@ defmodule Tutorials.Lists do
   def reverse(elements, acc \\ [])
   def reverse([], acc), do: acc
   def reverse([h | t], acc), do: reverse(t, [h | acc])
+
+  @doc """
+    map
+  """
+  def map(elements, func, acc \\ [])
+  def map([], _, acc), do: acc
+  def map([h | t], func, acc), do: map(t, func, [func.(h) | acc])
 end
