@@ -42,9 +42,16 @@ defmodule Tutorials.Lists do
   @doc """
     concat
   """
-  @spec concat([any()]) :: [any()]
+  @spec concat([any], [any]) :: [any]
   def concat(src, dst), do: concat_func(src |> reverse(), dst)
 
   defp concat_func([], dst), do: dst
   defp concat_func([h | t], dst), do:  concat_func(t, [h | dst])
+
+  @doc """
+    flat map
+  """
+  def flat_map(elements, func, acc \\ [])
+  def flat_map([], _, acc), do: acc
+  def flat_map([h | t], func, acc), do: flat_map(t, func, concat(acc, func.(h)))
 end
