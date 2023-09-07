@@ -21,5 +21,11 @@ defmodule Tutorials.Lists do
   def sum_tail_rec([], acc), do: acc
   def sum_tail_rec([h | t], acc), do: sum_tail_rec(t, acc + h)
 
-
+  @doc """
+  reverse contents ina list
+  """
+  @spec reverse([any()], [any()]) :: [any()]
+  def reverse(elements, acc \\ [])
+  def reverse([], acc), do: acc
+  def reverse([h | t], acc), do: reverse(t, [h | acc])
 end
