@@ -42,8 +42,9 @@ defmodule Tutorials.Lists do
   @doc """
     concat
   """
+  @spec concat([any()]) :: [any()]
   def concat(src, dst), do: concat_func(src |> reverse(), dst)
 
-  def concat_func([], dst), do: dst
-  def concat_func([h | t], dst), do:  concat_func(t, [h | dst])
+  defp concat_func([], dst), do: dst
+  defp concat_func([h | t], dst), do:  concat_func(t, [h | dst])
 end
