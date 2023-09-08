@@ -3,9 +3,9 @@ defmodule Tutorials.Structs.SevenWonders do
   alias Tutorials.Structs.SevenWonders
 
   @type t :: %SevenWonders{
-    name: String.t(),
-    country: String.t()
-  }
+          name: String.t(),
+          country: String.t()
+        }
 
   @spec all :: [t()]
   def all() do
@@ -19,4 +19,14 @@ defmodule Tutorials.Structs.SevenWonders do
       %SevenWonders{name: "The Great Wall of China", country: "China"}
     ]
   end
+
+  @doc """
+    print values in struct
+  """
+  @spec print_names([t()]) :: :ok
+  def print_names(wonders) do
+    # Enum.each(wonders, fn %{name: name} -> IO.puts(name) end)
+    wonders |> Enum.each(fn %{name: name} -> IO.puts(name) end)
+  end
+
 end
