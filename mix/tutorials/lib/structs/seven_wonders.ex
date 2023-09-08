@@ -29,4 +29,12 @@ defmodule Tutorials.Structs.SevenWonders do
     wonders |> Enum.each(fn %{name: name} -> IO.puts(name) end)
   end
 
+  @doc """
+    filter data in struct
+  """
+  def filter_by_country(wonders, country) do
+    wonders
+    |> Enum.filter(fn %{country: country_name} -> country_name == country end)
+  end
+
 end
