@@ -32,9 +32,19 @@ defmodule Tutorials.Structs.SevenWonders do
   @doc """
     filter data in struct
   """
+  @spec filter_by_country([t()], String.t()) :: [t()]
   def filter_by_country(wonders, country) do
     wonders
     |> Enum.filter(fn %{country: country_name} -> country_name == country end)
+  end
+
+  @doc """
+    filter starts with
+  """
+  @spec in_countries_starting_with_i([t()], String.t()) :: [t()]
+  def in_countries_starting_with_i(wonders) do
+    wonders
+    |> Enum.filter(fn %{country: country} -> String.starts_with?(country,"I") end)
   end
 
 end
