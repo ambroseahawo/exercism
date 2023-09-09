@@ -41,10 +41,19 @@ defmodule Tutorials.Structs.SevenWonders do
   @doc """
     filter starts with
   """
-  @spec in_countries_starting_with_i([t()], String.t()) :: [t()]
+  @spec in_countries_starting_with_i([t()]) :: [String.t()]
   def in_countries_starting_with_i(wonders) do
     wonders
     |> Enum.filter(fn %{country: country} -> String.starts_with?(country,"I") end)
+  end
+
+  @doc """
+    sort
+  """
+  @spec sort_by_country_length([t]) :: [t()]
+  def sort_by_country_length(wonders) do
+    wonders
+    |> Enum.sort(fn x,y -> String.length(x.country) < String.length(y.country) end)
   end
 
 end
