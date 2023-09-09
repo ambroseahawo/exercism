@@ -71,4 +71,11 @@ defmodule Tutorials.Structs.SevenWonders do
     |> Enum.reduce([], fn wonder, acc -> [{String.to_atom(wonder.country), wonder.name} | acc] end)
   end
 
+  def all_names(wonders) do
+    # wonders
+    # |> Enum.map(fn wonder -> wonder.name end) # method one
+    # |> Enum.map(&(&1.name)) # method two, shorthand anonymous function
+    for %{name: name} <- wonders, do: name # for comprehension
+  end
+
 end
