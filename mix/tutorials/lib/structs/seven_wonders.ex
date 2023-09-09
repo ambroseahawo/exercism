@@ -56,4 +56,19 @@ defmodule Tutorials.Structs.SevenWonders do
     |> Enum.sort(fn x,y -> String.length(x.country) < String.length(y.country) end)
   end
 
+  @doc """
+    reduce
+  """
+  @spec name_country_list([t]) :: [t()]
+  def name_country_list(wonders) do
+    wonders
+    |> Enum.reduce([], fn wonder, acc -> [[wonder.name, wonder.country] | acc] end)
+  end
+
+  @spec country_name_keyword_list([t()]) :: Keyword.t()
+  def country_name_keyword_list(wonders) do
+    wonders
+    |> Enum.reduce([], fn wonder, acc -> [{String.to_atom(wonder.country), wonder.name} | acc] end)
+  end
+
 end
