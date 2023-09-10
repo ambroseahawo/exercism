@@ -37,4 +37,9 @@ defmodule Tutorials.Structs.Expense do
         # |> Enum.sort_by(fn expense -> expense.date end) 
         |> Enum.sort_by(& &1.date) # short-hand
     end
+
+    @spec add_expense(t) :: [t()]
+    def add_expense(%Expense{} = expense) do
+        [expense | sample()]
+    end
 end
