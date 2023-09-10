@@ -24,4 +24,10 @@ defmodule Tutorials.Structs.Expense do
             %Expense{title: "Air Jordans", date: ~D[2022-10-30], amount: 799.99, store: "Nike"}
         ]
     end
+
+    @spec total([t]) :: number()
+    def total(expenses) do
+        expenses
+        |> Enum.reduce(0, fn expense, acc -> expense.amount + acc end)
+    end
 end
