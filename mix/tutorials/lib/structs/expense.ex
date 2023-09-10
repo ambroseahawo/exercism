@@ -15,6 +15,7 @@ defmodule Tutorials.Structs.Expense do
             store: String.t()     
         }
     
+    @spec sample :: [t()]
     def sample do
         [
             %Expense{title: "Grocery", date: ~D[2022-09-12], amount: 18.99, store: "Metro"},
