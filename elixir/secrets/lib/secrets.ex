@@ -25,4 +25,9 @@ defmodule Secrets do
     def secret_divide(secret) do
         &div(&1, secret)
     end
+
+    @spec secret_and(number()) :: number
+    def secret_and(secret) do
+        &Bitwise.band(&1, secret)
+    end
 end
