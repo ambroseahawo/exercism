@@ -1,18 +1,13 @@
 defmodule Secrets do
-  @moduledoc """
-  Documentation for Secrets.
-  """
+    @moduledoc """
+        secrets module documentation
+    """
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Secrets.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+    @doc """
+        secret add function
+    """
+    @spec secret_add(number()) :: number()
+    def secret_add(secret) do
+        &(&1 + secret)
+    end
 end
