@@ -1,3 +1,5 @@
+use Bitwise
+
 defmodule Secrets do
     @moduledoc """
         secrets module documentation
@@ -29,5 +31,10 @@ defmodule Secrets do
     @spec secret_and(number()) :: number
     def secret_and(secret) do
         &Bitwise.band(&1, secret)
+    end
+
+    @spec secret_xor(number()) :: number
+    def secret_xor(secret) do
+        &Bitwise.bxor(&1, secret)
     end
 end
