@@ -10,4 +10,9 @@ defmodule Secrets do
     def secret_add(secret) do
         &(&1 + secret)
     end
+
+    @spec secret_subtract(number() :: number())
+    def secret_subtract(secret) do
+        &(&1 - secret)
+    end
 end
