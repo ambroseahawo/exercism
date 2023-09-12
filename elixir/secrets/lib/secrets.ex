@@ -37,4 +37,9 @@ defmodule Secrets do
     def secret_xor(secret) do
         &Bitwise.bxor(&1, secret)
     end
+    
+    def secret_combine(secret_function1, secret_function2) do
+        # &(&1 |> then(secret_function1) |> then(secret_function2))
+        &(secret_function2.(secret_function1.(&1)))
+    end
 end
