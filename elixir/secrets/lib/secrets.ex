@@ -20,4 +20,9 @@ defmodule Secrets do
     def secret_multiply(secret) do
         &(&1 * secret)
     end
+
+    @spec secret_divide(number()) :: number()
+    def secret_divide(secret) do
+        &div(&1, secret)
+    end
 end
