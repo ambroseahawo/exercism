@@ -23,9 +23,21 @@ defmodule LanguageList do
   def delete(list, language), do: List.delete(list, language)
 
   @doc """
+    return first item in list
+  """
+  @spec first([any]) :: any()
+  def first(list), do: hd(list)
+
+  @doc """
     delete first element
   """
   @spec remove_head([any]) :: [any]
   def remove_head(list), do: List.delete(list, hd(list))
+
+  @doc """
+    return number of elements
+  """
+  @spec count([any]) :: number()
+  def count(list), do: length(list)
 
 end
