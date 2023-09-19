@@ -4,15 +4,9 @@ defmodule LanguageList do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> LanguageList.hello()
-      :world
-
+    return empty list
   """
-  def hello do
-    :world
-  end
+  @spec new() :: List.t()
+  def new(), do: []
+
 end
