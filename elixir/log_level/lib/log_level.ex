@@ -6,6 +6,7 @@ defmodule LogLevel do
 	@doc """
 		label log level
 	"""
+	@spec to_label(number(), Boolean.t()) :: :Atom.t()
 	def to_label(level, legacy?) do
 		cond do
 			level == 0 and not legacy? -> :trace
@@ -21,6 +22,7 @@ defmodule LogLevel do
 	@doc """
 		return alert recipient
 	"""
+	@spec alert_recipient(number(), Boolean.t()) :: :Atom.t()
 	def alert_recipient(level, legacy?) do
 		label = to_label(level, legacy?)
 
