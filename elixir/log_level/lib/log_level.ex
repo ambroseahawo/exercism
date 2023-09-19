@@ -1,18 +1,20 @@
 defmodule LogLevel do
-  @moduledoc """
-  Documentation for LogLevel.
-  """
+	@moduledoc """
+		LogLevel
+	"""
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> LogLevel.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+	@doc """
+		label log level
+	"""
+	def to_label(level, legacy?) do
+		cond do
+			level == 0 and not legacy? -> :trace
+			level == 1 -> :debug
+			level == 2 -> :info
+			level == 3 -> :warning
+			level == 4 -> :error
+			level == 5 and not legacy? -> :fatal
+			true -> :unknown
+		end
+	end
 end
