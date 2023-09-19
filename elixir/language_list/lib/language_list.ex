@@ -40,4 +40,16 @@ defmodule LanguageList do
   @spec count([any]) :: number()
   def count(list), do: length(list)
 
+  @doc """
+    in operator
+  """
+  @spec functional_list?([any]) :: Boolean.t()
+  def functional_list?(list) do
+    if "Elixir" in list do
+      true
+    else
+      false
+    end
+  end
+
 end
