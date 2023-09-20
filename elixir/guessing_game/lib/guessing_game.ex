@@ -4,15 +4,9 @@ defmodule GuessingGame do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> GuessingGame.hello()
-      :world
-
+    return correct if right guess
   """
-  def hello do
-    :world
-  end
+  @spec compare(number(), number()) :: String.t()
+  def compare(secret_number, guess) when guess == secret_number, do: "Correct"
+
 end
