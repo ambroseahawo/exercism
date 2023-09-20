@@ -11,12 +11,12 @@ defmodule GuessingGame do
     respond to lack of guess
   """
   @spec compare(number(), number()) :: String.t()
-  def compare(secret_number, guess) when guess == secret_number, do: "Correct"
+  def compare(secret_number, guess \\ :no_guess)
+  
+  def compare(_, :no_guess), do: "Make a guess"
+  def compare(same, same), do: "Correct"
   def compare(secret_number, guess) when guess > secret_number and ((guess - secret_number != 1) and (secret_number - guess != 1)), do: "Too high"
   def compare(secret_number, guess) when guess < secret_number and ((guess - secret_number != 1) and (secret_number - guess != 1)), do: "Too low"
   def compare(secret_number, guess) when (guess - secret_number == 1) or (secret_number - guess == 1), do: "So close"
-  def compare(secret_number, _), do: "Make a guess"
-  def compare(secret_number), do: "Make a guess"
-  # def compare(_, guess \\ :no_guess) when not is_integer(guess), do: "Make a guess"
 
 end
