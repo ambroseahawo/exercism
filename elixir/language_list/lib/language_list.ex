@@ -12,7 +12,7 @@ defmodule LanguageList do
   @doc """
     adds new item to list
   """
-  @spec add([any], String.t()) :: [any]
+  @spec add([any], String.t()) :: [any]-
   def add(list, language), do: [language | list]  #fast
   # def add(list, language), do: list++ [language]  #slow
 
