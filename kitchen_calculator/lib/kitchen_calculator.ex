@@ -19,6 +19,8 @@ defmodule KitchenCalculator do
   def to_milliliter({:tablespoon, _} = volume_pair), do: {:milliliter, (elem(volume_pair, 1)) * 15}
   def to_milliliter({:milliliter, _} = volume_pair), do: volume_pair
 
+  def to_milliliter_simpler({:cup, volume}), do: {:milliliter, volume * 240} # pattern matching
+
   @doc """
     convert milliliter volume-pair to another unit
   """
@@ -28,6 +30,8 @@ defmodule KitchenCalculator do
   def from_milliliter(volume_pair, :teaspoon = unit), do: {unit, (elem(volume_pair, 1)) / 5}
   def from_milliliter(volume_pair, :tablespoon = unit), do: {unit, (elem(volume_pair, 1)) / 15}
   def from_milliliter(volume_pair, :milliliter), do: volume_pair
+
+  def from_milliliter_simpler({:milliliter, volume}, :cup), do: {:cup, volume / 240} # pattern matching
 
   @doc """
     convert from any unit to any unit
