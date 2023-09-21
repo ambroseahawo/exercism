@@ -4,15 +4,9 @@ defmodule KitchenCalculator do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> KitchenCalculator.hello()
-      :world
-
+    return numeric volume
   """
-  def hello do
-    :world
-  end
+  @spec get_volume(Tuple.t()) :: number()
+  def get_volume(volume_pair), do: elem(volume_pair, 1)
+
 end
