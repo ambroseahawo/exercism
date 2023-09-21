@@ -29,4 +29,10 @@ defmodule KitchenCalculator do
   def from_milliliter(volume_pair, :tablespoon = unit), do: {unit, (elem(volume_pair, 1)) / 15}
   def from_milliliter(volume_pair, :milliliter = unit), do: volume_pair
 
+  @doc """
+    convert from any unit to any unit
+  """
+  @spec convert(Tuple.t(), Atom.t()) :: Tuple.t()
+  def convert(volume_pair, unit), do: volume_pair |> to_milliliter |> from_milliliter(unit)
+
 end
