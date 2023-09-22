@@ -26,4 +26,10 @@ defmodule HighSchoolSweetheart do
     Kernel.<>(first_initial <> " " , last_initial )
   end
 
+  @doc """
+    take two full names and return the initials
+  """
+  @spec pair(String.t(),String.t()) :: String.t()
+  def pair(full_name1, full_name2), do: Kernel.<>(initials(full_name1)<> " + ",initials(full_name2))
+
 end
