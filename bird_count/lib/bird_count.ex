@@ -4,15 +4,10 @@ defmodule BirdCount do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> BirdCount.hello()
-      :world
-
+    take a list of daily bird counts and return today's count
   """
-  def hello do
-    :world
-  end
+  @spec today([number()]) :: number()
+  def today([]), do: nil
+  def today(list), do: hd(list)
+
 end
