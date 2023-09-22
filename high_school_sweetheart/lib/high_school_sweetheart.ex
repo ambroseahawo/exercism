@@ -4,15 +4,9 @@ defmodule HighSchoolSweetheart do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> HighSchoolSweetheart.hello()
-      :world
-
+    return first letter in string 
   """
-  def hello do
-    :world
-  end
+  @spec first_letter(String.t()) :: String.t()
+  def first_letter(name), do: String.trim(name) |> String.at(0)
+
 end
