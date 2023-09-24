@@ -27,4 +27,17 @@ defmodule HighScore do
   @spec reset_score(Map.t(), String.t()) :: Map.t()
   def reset_score(scores, name), do: scores |> Map.put(name, 0)
 
+  @doc """
+    update map value
+  """
+  @spec update_score(Map.t(), String.t(), number()) :: Map.t()
+  def update_score(scores, name, score) do
+    current_score = Map.get(scores, name)
+    if current_score do
+      Map.put(scores, name, score + current_score)
+    else 
+      Map.put(scores, name, score)
+    end
+  end
+
 end
