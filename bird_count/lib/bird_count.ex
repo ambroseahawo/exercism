@@ -15,23 +15,31 @@ defmodule BirdCount do
   """
   @spec increment_day_count([number()]) :: [number()]
   def increment_day_count([]), do: [1]
-  def increment_day_count(list) do
-    Enum.map(list, fn list_item -> if hd(list) == list_item do list_item + 1 else list_item end end)
-  end
+  def increment_day_count([todays_count | rest]), do: [todays_count + 1 | rest]
+  # def increment_day_count(list) do
+  #   Enum.map(list, fn list_item -> if hd(list) == list_item do list_item + 1 else list_item end end)
+  # end
 
   @doc """
     return true if there was at least one day when no birds visited the garden, and false otherwise
   """
   @spec has_day_without_birds?([number()]) :: Boolean.t()
-  def has_day_without_birds?(list) do
-    if 0 in list do true else false end
-  end
+  def has_day_without_birds?([]), do: false
+  def has_day_without_birds?([0 | _rest]), do: true
+  def has_day_without_birds?([_todays_count | rest]),do: has_day_without_birds?(rest)
+  # def has_day_without_birds?(list) do
+  #   if 0 in list do true else false end
+  # end
 
   @doc """
     take a list of daily bird counts and return the total number
   """
   @spec total([number()]) :: number()
-  def total(list), do: Enum.sum(list)
+  # def total(list), do: Enum.sum(list)
+  def total(list), do: total(list, 0)
+
+  defp total([], acc), do: acc
+  defp total([todays_count | rest], acc), do: total(rest, acc + todays_count)
 
   @doc """
     take a list of daily bird counts and return the number of busy days.
