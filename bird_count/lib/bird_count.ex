@@ -27,4 +27,10 @@ defmodule BirdCount do
     if 0 in list do true else false end
   end
 
+  @doc """
+    take a list of daily bird counts and return the total number
+  """
+  @spec total([number()]) :: number()
+  def total(list), do: Enum.sum(list)
+
 end
