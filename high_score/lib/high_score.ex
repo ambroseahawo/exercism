@@ -40,4 +40,10 @@ defmodule HighScore do
     end
   end
 
+  @doc """
+    return list of keys in a map
+  """
+  @spec get_players(Map.t()) :: List.t()
+  def get_players(scores), do: scores |> Map.keys()
+
 end
