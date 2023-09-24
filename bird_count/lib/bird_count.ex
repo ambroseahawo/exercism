@@ -19,4 +19,12 @@ defmodule BirdCount do
     Enum.map(list, fn list_item -> if hd(list) == list_item do list_item + 1 else list_item end end)
   end
 
+  @doc """
+    return true if there was at least one day when no birds visited the garden, and false otherwise
+  """
+  @spec has_day_without_birds?([number()]) :: Boolean.t()
+  def has_day_without_birds?(list) do
+    if 0 in list do true else false end
+  end
+
 end
