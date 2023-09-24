@@ -31,14 +31,16 @@ defmodule HighScore do
     update map value
   """
   @spec update_score(Map.t(), String.t(), number()) :: Map.t()
-  def update_score(scores, name, score) do
-    current_score = Map.get(scores, name)
-    if current_score do
-      Map.put(scores, name, score + current_score)
-    else 
-      Map.put(scores, name, score)
-    end
-  end
+  # def update_score(scores, name, score) do
+  #   current_score = Map.get(scores, name)
+  #   if current_score do
+  #     Map.put(scores, name, score + current_score)
+  #   else 
+  #     Map.put(scores, name, score)
+  #   end
+  # end
+  def update_score(scores, name, score), do: Map.update(scores, name, score,fn current_value -> current_value + score end)
+    def update_score_short(scores, name, score), do: Map.update(scores, name, score, &(&1 + score))
 
   @doc """
     return list of keys in a map
