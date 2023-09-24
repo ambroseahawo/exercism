@@ -3,6 +3,9 @@ defmodule HighScore do
   Documentation for HighScore.
   """
 
+  # module attributes
+  @initial_score 0
+
   @doc """
     return new map
   """
@@ -13,7 +16,7 @@ defmodule HighScore do
     add items to map
   """
   @spec add_player(Map.t(), String.t(), number()) :: Map.t()
-  def add_player(scores, name, score \\ 0), do: Map.put(scores, name, score)
+  def add_player(scores, name, score \\ @initial_score), do: Map.put(scores, name, score)
 
   @doc """
     remove item from map
@@ -25,7 +28,7 @@ defmodule HighScore do
     update map value
   """
   @spec reset_score(Map.t(), String.t()) :: Map.t()
-  def reset_score(scores, name), do: scores |> Map.put(name, 0)
+  def reset_score(scores, name), do: scores |> Map.put(name, @initial_score)
 
   @doc """
     update map value
