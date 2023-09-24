@@ -4,15 +4,9 @@ defmodule HighScore do
   """
 
   @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> HighScore.hello()
-      :world
-
+    return new map
   """
-  def hello do
-    :world
-  end
+  @spec new() :: Map.t()
+  def new(), do: %{}
+
 end
