@@ -21,4 +21,10 @@ defmodule HighScore do
   @spec remove_player(Map.t(), String.t()) :: Map.t()
   def remove_player(scores, name), do: Map.delete(scores, name)
 
+  @doc """
+    update map value
+  """
+  @spec reset_score(Map.t(), String.t()) :: Map.t()
+  def reset_score(scores, name), do: scores |> Map.put(name, 0)
+
 end
