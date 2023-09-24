@@ -33,4 +33,15 @@ defmodule BirdCount do
   @spec total([number()]) :: number()
   def total(list), do: Enum.sum(list)
 
+  @doc """
+    take a list of daily bird counts and return the number of busy days.
+  """
+  @spec busy_days([number()]) :: number()
+  def busy_days(list), do: busy_days(list, 0)
+
+  defp busy_days([], acc), do: acc
+
+  defp busy_days([todays_count | rest], acc) when todays_count >= 5, do: busy_days(rest, acc + 1)
+  defp busy_days([_todays_count | rest], acc), do: busy_days(rest, acc)
+
 end
