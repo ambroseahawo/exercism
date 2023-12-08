@@ -1,6 +1,6 @@
-defmodule Tutorials do
+defmodule Scripts do
   @moduledoc """
-  Documentation for Tutorials.
+  Documentation for `Scripts`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Tutorials do
 
   ## Examples
 
-      iex> Tutorials.hello()
+      iex> Scripts.hello()
       :world
 
   """

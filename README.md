@@ -1,7 +1,7 @@
-# Exircism - Elixir
+# Elixir
 
 **TODO: Add description**
-## This repository consists of projects practiced on [Exircism](https://exercism.org/dashboard)
+## This repository consists of elixir projects practiced on [Exircism](https://exercism.org/dashboard)
 
 ## Installation
 

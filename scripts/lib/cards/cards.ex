@@ -1,4 +1,4 @@
-defmodule Cards do
+defmodule Scripts.Cards do
 
   @moduledoc """
   This module provides methods for creating and handling a deck of cards.
@@ -103,7 +103,7 @@ defmodule Cards do
 
   def create_hand(hand_size) do
     # when using pipe operator, we do not need to do any assignment to a temporary variable.
-    # the result of each function is automaticaaly sent to the next funxtion in the chain
+    # the result of each function is automatically sent to the next function in the chain
     # the pipe operator demands the methods to take consistent first arguments to work properly.
      Cards.create_deck()
      |> Cards.shuffle()

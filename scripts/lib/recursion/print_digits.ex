@@ -1,5 +1,5 @@
 # executing in the ascending stage
-defmodule Tutorials.Recursion.PrintDigits do
+defmodule Scripts.Recursion.PrintDigits do
   # Base case
   def up_to(0), do: 0
 
@@ -10,7 +10,7 @@ defmodule Tutorials.Recursion.PrintDigits do
 end
 
 # executing in the return stage
-# defmodule Tutorials.Recursion.PrintDigits do
+# defmodule Scripts.Recursion.PrintDigits do
 #   # Base case
 #   def up_to(0), do: 0
 

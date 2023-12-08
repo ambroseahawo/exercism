@@ -1,5 +1,5 @@
-defmodule Tutorials.Structs.Expense do
-    alias Tutorials.Structs.Expense
+defmodule Scripts.Structs.Expense do
+    alias Scripts.Structs.Expense
 
     defstruct(
         title: "",
@@ -12,9 +12,9 @@ defmodule Tutorials.Structs.Expense do
             title: String.t(),
             date: Date.t() | nil,
             amount: number(),
-            store: String.t()     
+            store: String.t()
         }
-    
+
     @spec sample :: [t()]
     def sample do
         [
@@ -34,7 +34,7 @@ defmodule Tutorials.Structs.Expense do
     @spec sort_by_date([t()]) :: [t()]
     def sort_by_date(expenses) do
         expenses
-        # |> Enum.sort_by(fn expense -> expense.date end) 
+        # |> Enum.sort_by(fn expense -> expense.date end)
         |> Enum.sort_by(& &1.date) # short-hand
     end
 

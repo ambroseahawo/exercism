@@ -1,6 +1,6 @@
-defmodule Tutorials.Structs.SevenWonders do
+defmodule Scripts.Structs.SevenWonders do
   defstruct name: "", country: ""
-  alias Tutorials.Structs.SevenWonders
+  alias Scripts.Structs.SevenWonders
 
   @type t :: %SevenWonders{
           name: String.t(),

@@ -1,4 +1,4 @@
-defmodule Tutorial.Recursion.ReverseNum do
+defmodule Scripts.Recursion.ReverseNum do
   def of(num, acc \\ 0)
   def of(0, acc), do: acc
 

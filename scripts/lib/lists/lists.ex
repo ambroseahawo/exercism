@@ -1,6 +1,6 @@
-defmodule Tutorials.Lists do
+defmodule Scripts.Lists do
   @moduledoc """
-  
+
   Function Summary:
 
   1. sum
