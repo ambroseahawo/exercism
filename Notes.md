@@ -29,3 +29,24 @@ Elixir - React;-
 1. https://medium.com/@ken11zer01/create-react-app-and-elixir-phoenix-227678660257#:~:text=Running%20elixir%20phoenix%20will%20also,right%20out%20of%20the%20box.
 
 2. https://github.com/iceniveth/phoenixcra
+- All data types are immutable
+- Pattern Matching
+- Maps
+- Character list
+- Protocols
+- Processes and Concurrency
+- Macros
+
+lists vs tuples
+
+- recursion
+- function overloading
+
+
+
+c "file.exs"
+https://mermaid.js.org/intro/
+
+
+https://elixir-lang.org/docs.html
+https://hexdocs.pm/elixir/Kern
