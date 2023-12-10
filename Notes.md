@@ -19,7 +19,7 @@ Erlang distinct parts:
 parse transform
 Elixir macros facility
 abstract syntax tree
-staircasing
+stair-casing
 
 https://www.youtube.com/watch?v=pBNOavRoNL0
 
@@ -37,7 +37,8 @@ Elixir - React;-
 - Processes and Concurrency
 - Macros
 
-lists vs tuples
+lists
+tuples, struct and map
 
 - recursion
 - function overloading
