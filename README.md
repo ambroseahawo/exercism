@@ -3,7 +3,9 @@
 **TODO: Add description**
 ## This repository consists of elixir projects practiced on [Exircism](https://exercism.org/dashboard)
 
-## Installation
+## Python
+
+## Elixir
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `guessing_game` to your list of dependencies in `mix.exs`:
