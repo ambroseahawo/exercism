@@ -13,7 +13,7 @@ erl_crash.dump
 /config/*.secret.exs
 .elixir_ls/
 fly.md
-
+.DS_Store
 ### Elixir Patch ###
 
 # End of https://www.toptal.com/developers/gitignore/api/elixir
